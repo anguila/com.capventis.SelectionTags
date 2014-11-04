@@ -1,0 +1,156 @@
+
+div.borderbox
+{
+	height: 46px;
+	width: 100%;
+	background-color: rgb(91, 90, 89);
+	border-bottom-color: rgb(108, 107, 106);
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-top-color: rgb(189, 89, 89);
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	border-top-style: none;
+	border-top-width: 2px;
+	box-sizing: border-box;
+	color: rgb(91, 90, 89);
+	display: block;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	padding: 0px;
+	margin: 0px;
+	outline:none;
+	vertical-align: top;	
+	left: 0px;
+	top: 0px;
+}
+
+ul.navlist {
+	#position: absolute;
+	top: 0px;
+	left: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 4px;
+	margin-right: 0px;
+	margin-top: 0px;
+}
+
+li.navlist
+{
+	top: 0px;
+	border-right-color: rgba(64, 63, 62, 0.4);
+	border-right-style: solid;
+	border-right-width: 1px;
+	box-shadow: rgba(255, 255, 255, 0.0980392) 1px 0px 0px 0px;
+	color: rgb(91, 90, 89);
+	display: table-cell;
+	font-family: Roboto, Arial, sans-serif;
+	font-size: 13px;
+	height: 30px;
+	list-style-type: disc;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	text-align: left;
+	width: 149px;
+}
+
+span.navlistfieldname
+{
+	color: rgb(221, 221, 221);
+	font-family: Roboto, Arial, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	height: 16px;
+	letter-spacing: normal;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 1px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	text-align: left;
+	text-overflow: ellipsis;
+	vertical-align: bottom;
+	white-space: nowrap;
+	width: 110px;
+}
+span.navlistvalues
+{
+	-webkit-font-smoothing: antialiased;
+	color: rgb(221, 221, 221);
+	cursor: pointer;
+	display: block;
+	float: left;
+	font-family: Roboto, Arial, sans-serif;
+	font-size: 13px;
+	font-weight: normal;
+	height: 17px;
+	letter-spacing: normal;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: -2px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	text-align: left;
+	text-overflow: ellipsis;
+	vertical-align: bottom;
+	white-space: nowrap;
+	width: 110px;
+}
+
+td.navlistcancel {
+	text-align: center;
+	vertical-align: bottom;
+	color: rgb(204, 204, 204);
+	cursor: pointer;
+	display: block;
+	float: right;
+	font-family: Roboto, Arial, sans-serif;
+	font-size: 25px;
+	height: 36px;
+	letter-spacing: normal;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 10px;	
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	text-align: center;
+	width: 32px;
+}
+
+td.navbutton {
+	vertical-align: center;
+	text-align: left;
+	height: 46px;
+}
