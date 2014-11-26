@@ -7,26 +7,41 @@ Qva.AddDocumentExtension("com.capventis.SelectionTags",
 
 		 // Get the chart ID from the QlikView document - will be something like "CH2340091" or "CH01"
 		 var divName = "capventis_Selection_Tags";
-
+		 
 		 // Set the inner html of the extension object to a div, including the chart id, that we can use in code
 		 if($("#div_"+divName).length==0)
 		 {
-			let divHTML='<div class="borderbox" id="div_'+divName+'">' 
-				+'<ul class="navlist" id="ul_'+divName+'">'
+			var divHTML='<div class="borderbox" id="div_' + divName + '">' 
+				+'<ul class="navlist" id="ul_' + divName + '">'
 				+'</ul>'
 				+'</div>';
 				
-			// Look for either a capventis_DocHeader (position after) or else position before the Tabrow
-			if($(".capventis_DocHeader").length>0)
+			// Look for a capventis_DocHeader, in which case, position after it 
+			if($(".capventis_DocHeader").length>0)  
 			{
 				$(".capventis_DocHeader").after(divHTML);
 			}
+			// If we don't have a doc header, we can position after the toolbar 
+			else if($("#QvAjaxToolbar").length>0)
+			{
+				$("#QvAjaxToolbar").after(divHTML);
+			}
+			// If the toolbar doesn't exist (e.g. in Desktop Web View), we can look for the tabrow and position before 
+			else if($("#Tabrow").length>0)
+			{
+				$('#Tabrow').before(divHTML);
+			}
+			// Potentially worst case, we position directly above the main PageContainer - which should always exist!
 			else
 			{
-				$("#Tabrow").before(divHTML);
+				$('#PageContainer').before(divHTML);
 			}
 			
-			//alert(_this.Element.innerHTML);
+			// Note that in SR9 of QV11.2, the Tabrow is not discovered at this step.  This should not be a problem
+			// In production because the Toolbar should be there.  If the toolbar isn't there - as in the Desktop
+			// web view, then it will fall through to the PageContainer and then the tabrow might be above the 
+			// selection tags.
+			
 		 }
 		
 		 // Get the current selections
@@ -67,7 +82,6 @@ Qva.AddDocumentExtension("com.capventis.SelectionTags",
 				 }
 			 }
 		 });
-		 
 		 
 	});
 			 
